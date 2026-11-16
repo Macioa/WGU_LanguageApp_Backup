@@ -1,0 +1,80 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src = 'config.js'></script>
+<script src = 'FileReader5.js'></script>
+<link rel="stylesheet" href="sample2.css" type="text/css" />
+
+<head>
+  <title>Vocab Trainer - Add Word</title>
+</head>
+
+<body>
+
+
+
+<nav>
+<ul class="topnav">
+	<li><a href ="index.html">Home</a></li>
+	<li><a href ="Quiz.html">Quiz</a></li>
+	<li class="dropdown"><a href ="javascript:void(0)" class="dropbtn">Vocab</a>
+	  <div class="dropdown-content">
+      <a href="FromFile.html">From File</a>
+      <a href="AddWord.html">Add Word</a>
+      <a href="Review.html">Review</a>
+	  <a href='ToFile.html'>To File</a>
+      </div>
+	</li>
+	<li class="right"><a href="About.html">About</a></li>
+</ul>
+</nav>
+
+<header>
+<h1>Add Word</h1>
+<aside>
+Add a word to the vocabulary. <br><br>Type vowel and tone number to add accent marks(ie ha3o = h&#259o).<br>First tone (a1 = &#257)<br> Second tone (a2 = &#225)<br>Third tone (a3 = &#259)<br>Fourth tone (a4 = &#224)<br><br>Click 'Get Char' to translate definition to hanzi (chinese characters)<br>(via <a href = 'https://cloud.google.com/translate/docs/' target = '_blank'>Google Translate API</a>)
+</aside>
+</header>
+
+<br><br><br>
+
+<section>
+
+<form name = 'newWord' accept-charset="UTF-8" method = 'post'>
+Word
+<br>
+<input type='text' name = 'Word' onchange = 'this.value = numbersToAccent(this.value)' size = 15>
+<br>
+
+Definition
+<br>
+<input type = 'text' name = 'Definition' size = 15>
+<input type = 'button' name = 'Find Char' value = 'Get Char' onclick = 'GoogleTranslate(this.form.Definition.value)'>
+<br>
+Char
+<br>
+<input type='text' name = 'Character' id = 'char' size = 5>
+<br>
+Example
+<br>
+<input type = 'text' onchange = 'this.value = numbersToAccent(this.value)' name = 'Example'>
+<br>
+Tags
+<br>
+<input type = 'text' name = 'Tags'>
+<br><br><br>
+<input type = 'submit' value = 'Submit' onClick="getWordFromForm(this.form)">
+</form>
+
+</section>
+
+</body>
+
+
+
+
+</html>
+
+
+
+
+

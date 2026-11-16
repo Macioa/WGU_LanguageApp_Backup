@@ -1,0 +1,86 @@
+<html>
+<link rel="stylesheet" href="sample2.css" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src = 'FileReader5.js'></script>
+
+
+<head>
+  <title>Vocab Trainer - Review</title>
+</head>
+
+<body>
+
+<ul class="topnav">
+	<li><a href ="index.html">Home</a></li>
+	<li><a href ="Quiz.html">Quiz</a></li>
+	<li class="dropdown"><a href ="javascript:void(0)" class="dropbtn">Vocab</a>
+	  <div class="dropdown-content">
+      <a href="FromFile.html">From File</a>
+      <a href="AddWord.html">Add Word</a>
+      <a href="Review.html">Review</a>
+	  <a href='ToFile.html'>To File</a>
+      </div>
+	</li>
+	<li class="right"><a href="About.html">About</a></li>
+</ul>
+
+<header>
+<h1>Review</h1>
+<aside>
+Display a table of entire vocabulary, or words with specific tags. Leave blank to review all.
+</aside>
+</header>
+
+<section>
+<body id = 'review'>
+<form name = 'newWord' accept-charset="UTF-8"' onsubmit='tableFromTags(event, this)'>
+Tags
+<br>
+<input type = 'text' name = 'Tags'>
+<br><br><br>
+<input type = 'submit' value = 'Submit'>
+</form>
+<br>
+<table class = 'example'>
+	<caption> Example Hardcoded Table </caption>
+	<tr>
+		<th> Ex Word </th>
+		<th> Ex Defintion </th>
+		<th> Ex Tags </th>
+	</tr>
+	<tr>
+		<td> first word </td>
+		<td> first definition </td>
+		<td> example, word, sample</td>
+	</tr>
+	<tr>
+		<td> second word </td>
+		<td> second definition </td>
+		<td> example, word </td>
+	</tr>
+	<tr>
+		<td> third word </td>
+		<td> third definition </td>
+		<td> example, word </td>
+	</tr>
+	<tr>
+		<td> fourth word </td>
+		<td> fourth definition </td>
+		<td> example, word </td>
+	</tr>
+</table>
+
+
+</section>
+
+
+
+</body>
+
+
+</html>
+
+
+
+
+

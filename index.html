@@ -1,0 +1,83 @@
+<html>
+<link rel="stylesheet" href="sample2.css" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src = 'FileReader5.js'></script>
+
+<head>
+  <title>Ryan's Vocab Trainer Home</title>
+</head>
+
+<body>
+
+<nav>
+<ul class="topnav">
+	<li><a href ="index.html">Home</a></li>
+	<li><a href ="Quiz.html">Quiz</a></li>
+	<li class="dropdown"><a href ="javascript:void(0)" class="dropbtn">Vocab</a>
+	  <div class="dropdown-content">
+      <a href="FromFile.html">From File</a>
+      <a href="AddWord.html">Add Word</a>
+      <a href="Review.html">Review</a>
+	  <a href='ToFile.html'>To File</a>
+      </div>
+	</li>
+	<li class="right"><a href="About.html">About</a></li>
+</ul>
+</nav>
+
+
+
+
+<header>
+<h1>Ryan's Vocabulary Trainer</h1>
+<aside>
+This site is intended as a utility to augment the process of learning a new language. Like smart flashcards, the user is given direct control over a vocabulary list which can be used for <a href = "Review.html">review</a> and <a href="Quiz.html">quizzes</a>.
+</aside>
+<br>
+<div class = "container" id = 'warningbox'>
+<img id = 'warning' alt = 'error' src = 'warning.jpg' >
+<span float = 'right'>No vocabulary was detected. If this is your first visit, please try the sample vocabulary.</span>
+<br><br><input type='button' width = 20em value ='Use Sample' border = 1 onclick='openSampleFile(); document.getElementById("warningbox").style = "display:none;";'>
+</div>
+</header>
+
+
+
+<section>
+<h3>Site Map</h3>
+<ul>
+	<li><a href="About.html">About</a><br>Description of site</li>
+	<li><a href="Quiz.html">Quiz</a><br>Take a quiz over a category of vocabulary words</li>
+	<li>Vocab->
+		<ol>
+			<li><a href="FromFile.html">From File</a><br>Load an existing vocabulary list from an external file</li>
+			<li><a href="AddWord.html">Add Word</a><br>Add a new word to the current vocabulary list
+			<li><a href="Review.html">Review</a><br>Review vocabulary table or category of words in vocabulary table</li>
+			<li><a href="ToFile.html">To File</a><br>Export the current vocaulary list for sharing or permanent storage</li>
+		</ol>	
+	</li>
+</ul>
+</div>
+
+<div>
+<h3>External Resources</h3>
+<aside>Mandarin</aside>
+<ul>
+	<li><a target = "_blank" href="http://dictionary.hantrainerpro.com/chinese-english/translation-zhongwen_chinese.htm">Han Trainer</a></li>
+	<li><a target = "_blank" href="https://www.tutorming.com">Tutor Ming live chinese courses</a></li>
+	<li><a target = "_blank" href="https://translate.google.com/#en/zh-CN/">Google Translate</a></li>
+	<li><a target = "_blank" href="https://wordswing.com/cards/text-game/escape">Escape - Game for learning mandarin</a></li>
+	<li><a target = "_blank" href="http://challenges.hackingchinese.com/resources">More resources</a></li>
+	<li><a target = "_blank" href ="http://www.chinesetools.eu/tools/pinyin-to-chinese/index.php#transcrire">Pin Yin Converter</a></li>
+</ul>
+</div>
+</section>
+</body>
+</html>
+
+<script>
+if (readDirectory().length!=0){
+	warn = document.getElementById("warningbox");
+	warn.style = "display:none;";
+	}
+</script>

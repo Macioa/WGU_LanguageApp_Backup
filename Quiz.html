@@ -1,0 +1,76 @@
+<html>
+<link rel="stylesheet" href="sample2.css" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src = 'FileReader5.js'></script>
+
+<head>
+  <title>Ryan's Vocab Trainer - Quiz</title>
+</head>
+
+<body>
+
+<nav>
+<ul class="topnav">
+	<li><a href ="index.html">Home</a></li>
+	<li><a href ="Quiz.html">Quiz</a></li>
+	<li class="dropdown"><a href ="javascript:void(0)" class="dropbtn">Vocab</a>
+	  <div class="dropdown-content">
+      <a href="FromFile.html">From File</a>
+      <a href="AddWord.html">Add Word</a>
+      <a href="Review.html">Review</a>
+	  <a href='ToFile.html'>To File</a>
+      </div>
+	</li>
+	<li class="right"><a href="About.html">About</a></li>
+</ul>
+</nav>
+
+
+
+<header id = 'title'>
+<h1>Quiz Page</h1>
+<aside>
+If a vocabulary is loaded, you can quiz the vocab on this page.
+</aside>
+</header>
+
+<section>
+
+<form id = 'QuizConfig'>
+Categories to Quiz<br>
+<input type = 'text' name = 'Tags'><br>
+Count to Master<br>
+<input type = 'number' name = 'Master'>
+<br><br>
+<div>Quiz By<br>
+<input type = 'radio' name = 'quizby' value = 'qpinyin'>pin yin
+<input type = 'radio' name = 'quizby' value = 'qchar'>character
+<input type = 'radio' name = 'quizby' value = 'qdef'>definition
+</div><br>
+<div>Answer By<br>
+<input type = 'radio' name = 'answerby' value = 'apinyin'>pin yin
+<input type = 'radio' name = 'answerby' value = 'achar'>character
+<input type = 'radio' name = 'answerby' value = 'adef'>definition
+</div><br>
+<div>Answer With<br>
+<input type = 'radio' name = 'inputtype' value = 'multchoice'>multiple choice
+<input type = 'radio' name = 'inputtype' value = 'field'>field
+</div><br>
+
+<input type = 'submit' name = 'submit' value = 'Start New Quiz' onclick = 'q.startNewQuiz(event); document.getElementById("title").style = "display:none;";'>
+</form>
+</body>
+
+</section>
+
+</html>
+<script>
+
+var qf = new quizForm(document.getElementById('QuizConfig'));
+var q = new Quiz(qf);
+
+
+</script>
+
+
+

@@ -1,0 +1,52 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src = 'FileReader5.js'></script>
+
+<link rel="stylesheet" href="sample2.css" type="text/css" />
+
+
+
+<head>
+  <title>Ryan's Vocab Trainer - Load File</title>
+</head>
+
+<body>
+
+<nav>
+<ul class="topnav">
+	<li><a href ="index.html">Home</a></li>
+	<li><a href ="Quiz.html">Quiz</a></li>
+	<li class="dropdown"><a href ="javascript:void(0)" class="dropbtn">Vocab</a>
+	  <div class="dropdown-content">
+      <a href="FromFile.html">From File</a>
+      <a href="AddWord.html">Add Word</a>
+      <a href="Review.html">Review</a>
+	  <a href='ToFile.html'>To File</a>
+      </div>
+	</li>
+	<li class="right"><a href="About.html">About</a></li>
+</ul>
+</nav>
+
+
+<header>
+<h1>Load File</h1>
+<aside>
+From this page you can load a vocabulary from a file, load a sample vocabulary, or reset the local browser storage.
+</aside>
+</header>
+
+<br><br>
+<section>
+<form class='container'>
+<input type='file' border = 1 accept='.csv' onchange='openUserFile(event)'><br>
+<br><br>
+<input type='button' width = 20em value ='Use Sample' border = 1 onclick='openSampleFile()'>
+<br><br>
+<input type='button' width = 20em value ='Clear Storage' border = 1 onclick='ClearStorage()'>
+</form>
+
+</section>
+
+</body>
+</html>
